@@ -1,16 +1,15 @@
 #!/usr/bin/env node
 
-const yargs = require('yargs/yargs');
-const { hideBin } = require('yargs/helpers');
+
 const credentials = require('./lib/credentials');
 const appwrite = require('./lib/appwrite');
 const defaults = require('./lib/defaults');
-const { extended, connect } = require('./lib/commands')
+const { yargs, connect } = require('./lib/commands')
 
 credentials.loadCredentials();
 defaults.loadDefaults();
 
-const argv = extended(yargs(hideBin(process.argv)))
+const argv = yargs(process.argv)
     .command('connect', 'Connect to Appwrite', (yargs) => {
         return yargs
             .option('endpoint', {
@@ -31,6 +30,7 @@ const argv = extended(yargs(hideBin(process.argv)))
     }, (argv) => {
         credentials.saveCredentials(argv.endpoint, argv.project, argv.apikey);
     })
+    .foo()
     .command('create-project', 'Create a new project', (yargs) => {
         return yargs
             .option('endpoint', {
