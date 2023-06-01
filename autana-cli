@@ -3,33 +3,14 @@
 const credentials = require('./lib/credentials');
 const appwrite = require('./lib/appwrite');
 const defaults = require('./lib/defaults');
-const { yargs, connect } = require('./lib/commands')
+const { yargs } = require('./lib/commands')
 
 credentials.loadCredentials();
 defaults.loadDefaults();
 
 const argv = yargs(process.argv)
     .addConnectCommand()
-    .command('create-project', 'Create a new project', (yargs) => {
-        return yargs
-            .option('endpoint', {
-                describe: 'Project endpoint',
-                type: 'string',
-                demandOption: true,
-            })
-            .option('project', {
-                describe: 'Project ID',
-                type: 'string',
-                demandOption: true,
-            })
-            .option('apikey', {
-                describe: 'API key',
-                type: 'string',
-                demandOption: true,
-            });
-    }, (argv) => {
-        // TODO: Implement create-project command
-    })
+    .addProjectsCommand()
     .help()
     .argv;
 
