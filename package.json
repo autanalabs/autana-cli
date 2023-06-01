@@ -5,9 +5,8 @@
   "author": "Gilbert Gonzalez <gb@autanalabs.com>",
   "main": "main.js",
   "scripts": {
-    "start": "node ./autana-cli",
-    "test1": "./autana-cli connect --project api-gateway --apikey 7af2626e01797a2f1598c3eeff7b1f24c7b12fb6a03f485ca8f94dfa193e80cb1063d09dec892023d3270d157f8cca092d4b04618c9a3384ec5cbc9695aec458bf40d272b1bb4e3eaf6507ef338d6e9501a06ec5077855e70c0685cb6de77aca260e29b4b89c96d686fba6a55ac68a1d219b9dc1144a21d754bddfaec9906b8d"
-  },
+    "start": "node ./autana-cli"
+   },
   "dependencies": {
     "node-appwrite": "^8.1.0",
     "yargs": "^17.7.2"
