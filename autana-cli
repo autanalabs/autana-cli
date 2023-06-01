@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-
 const credentials = require('./lib/credentials');
 const appwrite = require('./lib/appwrite');
 const defaults = require('./lib/defaults');
@@ -31,7 +30,6 @@ const argv = yargs(process.argv)
     }, (argv) => {
         // TODO: Implement create-project command
     })
-    // TODO: Add more commands here
     .help()
     .argv;
 
