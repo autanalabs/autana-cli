@@ -1,0 +1,14 @@
+{
+  "name": "autana-cli",
+  "version": "0.0.1",
+  "description": "A client for the Autana platform",
+  "author": "Gilbert Gonzalez <gb@autanalabs.com>",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main"
+  },
+  "dependencies": {
+    "appwrite": "^10.2.0",
+    "yargs": "^17.7.2"
+  }
+}
