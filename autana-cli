@@ -10,27 +10,7 @@ credentials.loadCredentials();
 defaults.loadDefaults();
 
 const argv = yargs(process.argv)
-    .command('connect', 'Connect to Appwrite', (yargs) => {
-        return yargs
-            .option('endpoint', {
-                describe: 'Appwrite endpoint',
-                type: 'string',
-                default: 'https://cloud.appwrite.io/v1',
-            })
-            .option('project', {
-                describe: 'Appwrite project ID',
-                type: 'string',
-                demandOption: true,
-            })
-            .option('apikey', {
-                describe: 'Appwrite API key',
-                type: 'string',
-                demandOption: true,
-            });
-    }, (argv) => {
-        credentials.saveCredentials(argv.endpoint, argv.project, argv.apikey);
-    })
-    .foo()
+    .addConnectCommand()
     .command('create-project', 'Create a new project', (yargs) => {
         return yargs
             .option('endpoint', {
