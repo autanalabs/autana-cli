@@ -5,11 +5,12 @@ const { hideBin } = require('yargs/helpers');
 const credentials = require('./lib/credentials');
 const appwrite = require('./lib/appwrite');
 const defaults = require('./lib/defaults');
+const { extended, connect } = require('./lib/commands')
 
 credentials.loadCredentials();
 defaults.loadDefaults();
 
-const argv = yargs(hideBin(process.argv))
+const argv = extended(yargs(hideBin(process.argv)))
     .command('connect', 'Connect to Appwrite', (yargs) => {
         return yargs
             .option('endpoint', {
