@@ -5,7 +5,8 @@
   "author": "Gilbert Gonzalez <gb@autanalabs.com>",
   "main": "main.js",
   "scripts": {
-    "start": "node ./autana-cli"
+    "start": "node ./autana-cli",
+    "test": "node ./autana-cli project update ab"
    },
   "dependencies": {
     "node-appwrite": "^8.1.0",
