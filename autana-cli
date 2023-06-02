@@ -5,7 +5,6 @@ const appwrite = require('./lib/appwrite');
 const defaults = require('./lib/defaults');
 const { yargs } = require('./lib/commands')
 
-credentials.loadCredentials();
 defaults.loadDefaults();
 
 const argv = yargs(process.argv)
