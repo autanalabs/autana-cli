@@ -10,6 +10,7 @@ defaults.loadDefaults();
 const argv = yargs(process.argv)
     .addConnectCommand()
     .addProjectsCommand()
+    .addRulesCommand()
     .help()
     .demandCommand(1, 'Provide a valida command')
     .argv;
