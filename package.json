@@ -8,8 +8,28 @@
     "start": "node ./autana-cli",
     "test": "node ./autana-cli project update ab"
    },
+   "engines": {
+    "node": ">=12.0.0"
+  },
   "dependencies": {
     "node-appwrite": "^8.1.0",
     "yargs": "^17.7.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/autanalabs/autana-cli.git#master"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "autana",
+    "REST",
+    "webhook",
+    "apigateway",
+    "appwrite"
+  ],
+  "bugs": {
+    "url": "https://github.com/autanalabs/autana-cli/issues"
+  },
+  "homepage": "https://github.com/autanalabs/autana-cli/tree/master#readme"
+ 
 }
